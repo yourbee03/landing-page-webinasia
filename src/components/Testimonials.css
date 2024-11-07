@@ -1,0 +1,120 @@
+.testimonials {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+}
+
+.testimonials h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.testimonials h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.testimonial-content {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.testimonial-text {
+  font-size: 1.1em;
+  color: #555;
+  font-style: italic;
+}
+
+.testimonial-carousel {
+  max-width: 600px; /* Limit the width of the carousel */
+  margin: 0 auto;  /* Center the carousel container */
+  position: relative; /* For positioning arrows */
+}
+
+.testimonial-item {
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+
+.slick-center .testimonial-item {
+  transform: scale(1.05); /* Slightly enlarge the active testimonial */
+  opacity: 1;
+  z-index: 1;
+}
+
+.testimonial-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+  border: 3px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.slick-center .testimonial-photo {
+  border-color: #333;
+}
+
+.testimonial-rating {
+  color: #ffbc00;
+  margin-bottom: 10px;
+}
+
+.star {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.star.filled {
+  color: #ffbc00;
+}
+
+.testimonial-name {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0;
+}
+
+.testimonial-company {
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  font-size: 1.5em;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  position: absolute; /* Position arrows absolutely */
+  top: 50%; /* Center arrows vertically */
+  transform: translateY(-50%); /* Correct vertical alignment */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  opacity: 1;
+}
+
+.slick-prev {
+  left: -40px; /* Position left arrow */
+}
+
+.slick-next {
+  right: -40px; /* Position right arrow */
+}

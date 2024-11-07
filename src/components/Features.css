@@ -1,0 +1,106 @@
+.features {
+  text-align: center;
+  padding: 8px;
+  background-color: #f8f9fa;
+}
+
+.features h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.features-carousel .feature-item {
+  background-color: #fff; /* Ensure solid background */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px; /* Ensure equal padding on all sides */
+  margin: 0 30px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+.features-carousel .slick-center .feature-item {
+  border: 2px solid #e8e8e8; /* Highlight the active (center) slide with a border */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Slightly scale up the active slide */
+  background-color: #ffffff; /* Ensure the background stays solid */
+}
+
+.features-carousel .feature-item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.features-carousel .feature-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0d7794;
+  margin-bottom: 10px;
+}
+
+.features-carousel .feature-item p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.slick-dots {
+  bottom: -30px;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #ccc;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #e8e8e8;
+}
+
+/* Styles for the previous and next arrows */
+.slick-prev, .slick-next {
+  width: 40px;  /* Increase width */
+  height: 40px; /* Increase height */
+  background-color: #e8e8e8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px; /* Set the size of the arrow icons */
+  z-index: 1;
+  position: absolute; /* Ensure they stay within the carousel container */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-prev {
+  left: 10px; /* Position the previous button on the left */
+}
+
+.slick-next {
+  right: 10px; /* Position the next button on the right */
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background-color: #d1d1d1; /* Slightly darker on hover */
+}
+
+.slick-prev:before, .slick-next:before {
+  content: ''; /* Remove default icons */
+}
+
+/* Add custom arrow icons (for example, using font-awesome or CSS) */
+.slick-prev::before {
+  content: '←'; /* Left arrow */
+  font-size: 24px; /* Adjust size */
+}
+
+.slick-next::before {
+  content: '→'; /* Right arrow */
+  font-size: 24px; /* Adjust size */
+}

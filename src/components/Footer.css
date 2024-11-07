@@ -1,0 +1,135 @@
+.footer {
+  background-color: #559cff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-align: left; /* Ensure left alignment for overall footer */
+}
+
+.email-info {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Spacing between icon and email text */
+}
+
+.email-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.email-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.footer-logo-section {
+  max-width: 300px;
+  text-align: left; /* Left-align text within this section */
+}
+
+.footer-logo {
+  width: 250px;
+  margin-bottom: 4px;
+}
+
+.footer-logo-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.certification {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cert-icon {
+  width: 40px;
+  height: auto;
+}
+
+.footer-links-section {
+  min-width: 200px;
+  text-align: left; /* Left-align text within this section */
+}
+
+.footer-links-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-links-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links-section ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact-section {
+  max-width: 200px;
+  text-align: left; /* Left-align text within this section */
+}
+
+.footer-contact-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-contact-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #666;
+  margin-top: 20px;
+  text-align: left; /* Left-align text within the footer bottom */
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+

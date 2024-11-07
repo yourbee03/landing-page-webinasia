@@ -1,0 +1,55 @@
+.about-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.team-carousel {
+  padding: 20px 0;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.slick-slide {
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.slick-center {
+  opacity: 1;
+  transform: scale(1.1); /* Slightly zoom in the center slide */
+  z-index: 1; /* Ensure the center slide is on top */
+}
+
+.team-member {
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  transform: perspective(1000px) rotateY(15deg); /* Add a slight 3D effect */
+}
+
+.slick-center .team-member {
+  transform: perspective(1000px) rotateY(0); /* Reset rotation for center slide */
+}
+
+.member-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  max-width: 150px;
+  max-height: 150px;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.slick-center .member-photo {
+  transform: scale(1.1); /* Zoom-in effect on the center profile */
+}

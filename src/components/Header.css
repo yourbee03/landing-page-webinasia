@@ -1,0 +1,45 @@
+.header {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px; /* Perbesar padding di kiri dan kanan */
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo img {
+    height: 90px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 130px;
+  }
+  
+  .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .login-btn {
+    background: linear-gradient(54deg, #509CF5, #FFEF5E);
+    color: #fff;
+    padding: 10px 26px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.4s ease;
+  }
+  
+  .login-btn:hover {
+    background: linear-gradient(to bottom, #FFEF5E, #509CF5);
+  }
+  
+  
+  
