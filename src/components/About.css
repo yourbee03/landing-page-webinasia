@@ -1,55 +1,128 @@
 .about-section {
-  padding: 40px 20px;
-  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: #f5f5f5;
+  padding: 40px;
 }
 
 .about-content {
-  max-width: 800px;
-  margin: 0 auto 40px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.about-goals h2 {
+  font-size: 1.8rem;
+  color: #3498db;
+  margin-top: 20px;
+}
+
+.about-goals p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+}
+
+.about-goals h2, .about-goals p {
+  margin-bottom: 20px;
+}
+
+.about-goals svg {
+  margin-right: 10px;
 }
 
 .team-carousel {
-  padding: 20px 0;
-  margin: 0 auto;
-  max-width: 80%;
+  text-align: center;
 }
 
-.slick-slide {
-  opacity: 0.5;
-  transform: scale(0.8);
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.slick-center {
-  opacity: 1;
-  transform: scale(1.1); /* Slightly zoom in the center slide */
-  z-index: 1; /* Ensure the center slide is on top */
+.team-carousel h3 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
 }
 
 .team-member {
-  text-align: center;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  box-sizing: border-box;
-  transition: transform 0.3s ease;
-  transform: perspective(1000px) rotateY(15deg); /* Add a slight 3D effect */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Memastikan konten berada di tengah secara vertikal */
+  align-items: center;  /* Memastikan konten berada di tengah secara horizontal */
 }
 
-.slick-center .team-member {
-  transform: perspective(1000px) rotateY(0); /* Reset rotation for center slide */
+.team-member:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .member-photo {
-  width: 100%;
-  height: auto;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  object-fit: cover;
-  max-width: 150px;
-  max-height: 150px;
-  margin: 0 auto;
-  display: block;
-  transition: transform 0.3s ease;
+  margin-bottom: 15px;
+  object-fit: cover; /* Menjaga agar gambar proporsional */
+  display: block; /* Pastikan gambar adalah block-level element */
+  margin-left: auto; /* Pusatkan gambar secara horizontal */
+  margin-right: auto; /* Pusatkan gambar secara horizontal */
 }
 
-.slick-center .member-photo {
-  transform: scale(1.1); /* Zoom-in effect on the center profile */
+.team-member h4 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+}
+
+.slick-prev, .slick-next {
+  background-color: #3498db;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  z-index: 2;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background-color: #2980b9;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #3498db;
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .about-goals h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-goals p {
+    font-size: 1rem;
+  }
+
+  .team-carousel h3 {
+    font-size: 1.8rem;
+  }
 }

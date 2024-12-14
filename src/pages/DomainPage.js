@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios"; // Pastikan Anda menginstal axios
+import axios from "axios";
 import "./DomainPage.css";
 
 const DomainPage = () => {
@@ -14,8 +14,8 @@ const DomainPage = () => {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredDomains, setFilteredDomains] = useState(domains);
-  const [domainAvailability, setDomainAvailability] = useState(null); // Untuk status domain
-  const [isLoading, setIsLoading] = useState(false); // Untuk status loading
+  const [domainAvailability, setDomainAvailability] = useState(null); 
+  const [isLoading, setIsLoading] = useState(false); 
 
   const API_KEY = "at_xZ1d7oLryHzjryRQ8KxAq9pNJuEwt";
 
@@ -60,7 +60,7 @@ const DomainPage = () => {
   };
 
   return (
-    <div className="domain-page">
+    <div id="domain" className="domain-page">
       {/* Hero Section */}
       <header className="domain-hero">
         <div className="hero-content">
@@ -76,8 +76,8 @@ const DomainPage = () => {
             />
             <button onClick={handleSearch}>Cari Domain</button>
           </div>
-          {isLoading && <p>Mencari domain...</p>}
-          {domainAvailability && <p>{domainAvailability}</p>}
+          {isLoading && <p className="loading-text">Mencari domain...</p>}
+          {domainAvailability && <p className="availability-status">{domainAvailability}</p>}
         </div>
       </header>
 
@@ -127,11 +127,6 @@ const DomainPage = () => {
           </p>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="domain-footer">
-        <p>© 2024 Webinasia. Semua hak dilindungi.</p>
-      </footer>
     </div>
   );
 };

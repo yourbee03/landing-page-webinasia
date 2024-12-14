@@ -3,23 +3,38 @@ import './DetailPage.css';
 
 const DetailPage = () => {
   const features = [
-    "Fitur 1: Lorem ipsum dolor sit amet",
-    "Fitur 2: Lorem ipsum dolor sit amet",
-    "Fitur 3: Lorem ipsum dolor sit amet",
-    "Fitur 4: Lorem ipsum dolor sit amet",
-    "Fitur 5: Lorem ipsum dolor sit amet",
+    "Custom Domain",
+    "Desain Profesional",
+    "Dukungan SEO Dasar",
+    "Integrasi Media Sosial",
+    "Pembaharuan Konten Bulanan",
   ];
 
   const plans = [
-    { name: "Basic", price: "Rp 20.000", features: [true, false, true, false, false] },
-    { name: "Pro", price: "Rp 30.000", features: [true, true, true, true, false] },
-    { name: "Ultimate", price: "Rp 50.000", features: [true, true, true, true, true] }
+    { name: "Basic", price: "Rp 500.000/bulan", features: [true, true, false, false, false] },
+    { name: "Pro", price: "Rp 1.000.000/bulan", features: [true, true, true, true, false] },
+    { name: "Premium", price: "Rp 2.000.000/bulan", features: [true, true, true, true, true] }
   ];
 
   const templates = [
-    { name: "Template 1", category: "Business", imageUrl: "https://via.placeholder.com/300x200", previewUrl: "https://example.com/template1" },
-    { name: "Template 2", category: "E-commerce", imageUrl: "https://via.placeholder.com/300x200", previewUrl: "https://example.com/template2" },
-    { name: "Template 3", category: "Portfolio", imageUrl: "https://via.placeholder.com/300x200", previewUrl: "https://example.com/template3" }
+    { 
+      name: "Astra", 
+      category: "E-commerce", 
+      imageUrl: "/images/template1.png", 
+      previewUrl: "https://websitedemos.net/t-shirts-store-04/?customize=template" 
+    },
+    { 
+      name: "Flatsome", 
+      category: "Fashion", 
+      imageUrl: "/images/template2.png", 
+      previewUrl: "https://demos.flatsome.com/demos/shop-demos/fullscreen-fashion/" 
+    },
+    { 
+      name: "Kalium", 
+      category: "F&B", 
+      imageUrl: "/images/template3.png", 
+      previewUrl: "https://demo.kaliumtheme.com/restaurant/" 
+    }
   ];
 
   const openPreview = (url) => {
@@ -27,7 +42,7 @@ const DetailPage = () => {
   };
 
   return (
-    <div className="detail-page">
+    <div id="detail" className="detail-page">
       {/* Header Section */}
       <section className="header-section">
         <h1>Detail Paket</h1>
@@ -47,7 +62,7 @@ const DetailPage = () => {
                   </li>
                 ))}
               </ul>
-              <button>Pilih Paket</button>
+              <button className="select-button">Pilih Paket</button>
             </div>
           ))}
         </div>
@@ -67,18 +82,6 @@ const DetailPage = () => {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="features-section">
-        <h2>Fitur</h2>
-        <div className="features-container">
-          <ul>
-            {features.map((feature, index) => (
-              <li key={index}>{feature}</li>
-            ))}
-          </ul>
         </div>
       </section>
 
@@ -108,11 +111,6 @@ const DetailPage = () => {
           </tbody>
         </table>
       </section>
-
-      {/* Footer Section */}
-      <footer className="footer-section">
-        <p>© 2024 Webinasia. All rights reserved.</p>
-      </footer>
     </div>
   );
 };

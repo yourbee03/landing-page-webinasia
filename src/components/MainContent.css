@@ -1,88 +1,129 @@
 .main-content {
-    background-image: url('../images/bg.png');  /* Background image path */
-    background-size: cover;
-    background-position: center;
-    padding: 80px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .content-container {
-    display: flex;
-    max-width: 1200px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .text-section {
-    color: #333;
-    max-width: 50%;
-  }
-  
-  .text-section h1 {
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  .text-section h2 {
-    font-size: 1.8rem;
-    color: #000;
-    font-weight: 700;
-  }
-  
-  .highlight {
-    color: #ff9900;
-  }
-  
-  .features-list {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
-  }
-  
-  .features-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-top: 10px;
-  }
-  
-  .price-amount {
-    color: #ff9900;
-    font-size: 2rem;
-  }
-  
-  .promo-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #ffc107;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .promo-btn:hover {
-    background-color: #ff9900;
-  }
-  
-  .image-section img {
-    width: 100%;
-    max-width: 400px;
-  }
-  
+  background-image: url('../images/bg.png'); /* Ensure the correct background path */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center;
+  padding-left: 50px; /* Add padding to give space from the left edge */
+}
+
+.content-container {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
+  transform: perspective(1000px) rotateX(10deg) rotateY(-5deg); /* 3D perspective */
+  transition: transform 0.3s ease;
+  width: 400px; /* Set a fixed width for the container */
+}
+
+.content-container:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg); /* Hover effect to enhance 3D feeling */
+}
+
+.text-section h1, .text-section h2 {
+  text-align: left; /* Align text to the left */
+  color: #333;
+  text-shadow: 2px 2px 5px rgba(65, 71, 151, 0.2); /* Soft text shadow for more depth */
+}
+
+.highlight {
+  color: #1930fe; /* Highlight color */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft text shadow for highlight */
+}
+
+.features-list {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1.2rem;
+  color: #333
+}
+
+.features-list li {
+  margin: 10px 0;
+  font-weight: 500;
+  position: relative;
+}
+
+.features-list li::before {
+  content: '✔';
+  position: absolute;
+  left: -25px;
+  font-size: 1.5rem;
+  color: #1930fe;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 20px;
+}
+
+.price-amount {
+  color: #1930fe; /* Highlight price amount */
+}
+
+.promo-btn {
+  background-color: #0b8dff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promo-btn:hover {
+  transform: translateY(-5px); /* Button hover effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+/* Add new content styles */
+.additional-content {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.additional-content h3 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.additional-content p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.additional-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.more-info-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.more-info-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}

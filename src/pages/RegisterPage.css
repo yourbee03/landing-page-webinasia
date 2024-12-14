@@ -1,0 +1,157 @@
+/* Base styling for the container */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center/cover;
+    background-size: cover;
+    color: #0c0b0b;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding-top: 100px;
+    perspective: 1000px; /* Creates 3D space */
+    overflow: hidden; /* Prevents overflow */
+}
+  
+/* Intro section with fading in effect */
+.intro-content {
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.intro-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    animation: rotateIn 2s ease-in-out;
+}
+
+.intro-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Register form with 3D effects */
+.register-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: rotateY(0deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Faster transition */
+    transform-style: preserve-3d;
+    animation: formEnter 1.5s ease-in-out;
+    position: relative; /* Prevents form overlap */
+    width: 90%;
+    max-width: 400px; /* Limits the form width */
+}
+
+/* Heading of the form */
+.register-form h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Input field styling */
+.input-field {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1; /* Ensures input fields are above the 3D transformations */
+}
+
+.input-field input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Faster transition */
+    background-color: white; /* Ensure background of the input is clear */
+}
+
+/* Focus state for input */
+.input-field input:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.8);
+    border-color: #3498db;
+}
+
+/* Submit button with hover effect */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Faster transition */
+    transform: perspective(600px);
+}
+
+/* Hover state for submit button */
+.submit-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Footer with link styling */
+.register-footer {
+    margin-top: 20px;
+}
+
+.register-footer a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .register-container {
+        padding-top: 50px;
+    }
+
+    .intro-content h1 {
+        font-size: 2rem; /* Smaller font for mobile */
+    }
+
+    .intro-content p {
+        font-size: 1rem; /* Adjusted font size */
+    }
+
+    .register-form {
+        padding: 20px;
+    }
+
+    .input-field input {
+        padding: 12px;
+        font-size: 0.9rem; /* Adjust input size for smaller screens */
+    }
+
+    .submit-button {
+        padding: 12px;
+        font-size: 1rem; /* Adjust button size */
+    }
+}
+
+@media (max-width: 480px) {
+    .register-container {
+        padding-top: 40px;
+    }
+
+    .register-form {
+        width: 85%;
+        max-width: 100%; /* Ensure form takes up more space on very small screens */
+    }
+}

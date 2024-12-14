@@ -1,12 +1,13 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { FaBullseye, FaChartBar, FaUsers, FaRocket } from 'react-icons/fa'; // Menambahkan ikon
 import './About.css';
 
 function About() {
   const teamMembers = [
     {
       photo: 'images/member1.jpg',
-      name: 'John Doe',
+      name: 'M Agil Syafikri',
       jobdesc: 'Chief Executive Officer',
     },
     {
@@ -16,12 +17,12 @@ function About() {
     },
     {
       photo: 'images/member3.jpg',
-      name: 'Alice Johnson',
+      name: 'Nadzran Ghamidi',
       jobdesc: 'Chief Operating Officer',
     },
     {
       photo: 'images/member4.jpg',
-      name: 'Bob Brown',
+      name: 'Lusyana Ikhtiarani',
       jobdesc: 'Chief Marketing Officer',
     },
   ];
@@ -36,7 +37,7 @@ function About() {
     autoplaySpeed: 3000,
     arrows: false,
     centerMode: true,
-    centerPadding: '0px', // Ensures images are fully visible
+    centerPadding: '0px',
     focusOnSelect: true,
   };
 
@@ -47,12 +48,13 @@ function About() {
         <p>
           Kami adalah platform yang bertujuan untuk menyediakan solusi inovatif bagi kebutuhan Anda. Dengan berbagai fitur unggulan, kami berkomitmen untuk memberikan layanan terbaik yang mampu meningkatkan produktivitas dan efisiensi Anda.
         </p>
-        <p>
-          <h2>Visi</h2> menjadi pemimpin di bidang ini dengan terus berinovasi dan memberikan pengalaman terbaik kepada pengguna.
-        </p>
-        <p>
-          <h2>Misi</h2> menjadi pemimpin di bidang ini dengan terus berinovasi dan memberikan pengalaman terbaik kepada pengguna.
-        </p>
+
+        <div className="about-goals">
+          <h2><FaBullseye /> Visi</h2>
+          <p>Menjadi pemimpin di bidang ini dengan terus berinovasi dan memberikan pengalaman terbaik kepada pengguna.</p>
+          <h2><FaRocket /> Misi</h2>
+          <p>Menyediakan layanan yang berorientasi pada pengguna dengan meningkatkan kualitas dan efisiensi secara berkelanjutan.</p>
+        </div>
       </div>
 
       <div className="team-carousel">

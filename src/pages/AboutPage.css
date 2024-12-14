@@ -1,0 +1,52 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #f0f4f8, #d9e6f2);
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .about-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Main Content Styling */
+  .about-content {
+    flex: 1;
+    padding: 50px 20px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 90%;
+    width: 100%;
+  }
+  
+  .about-content h2 {
+    font-size: 2.5rem;
+    color: #222;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-content {
+      padding: 30px 15px;
+    }
+  
+    .about-content h2 {
+      font-size: 2rem;
+    }
+  }
+  

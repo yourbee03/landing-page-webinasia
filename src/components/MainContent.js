@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './MainContent.css';
 
 const MainContent = () => {
@@ -13,14 +14,16 @@ const MainContent = () => {
             Dengan <strong>Mudah</strong> Dan <strong>Cepat</strong>
           </h2>
           <ul className="features-list">
-            <li>✔ Gratis Domain</li>
-            <li>✔ Bantuan Pelanggan 24/7</li>
-            <li>✔ 10 Template Free</li>
+            <li>Gratis Domain</li>
+            <li>Bantuan Pelanggan 24/7</li>
+            <li>Template Berkualitas</li>
           </ul>
           <div className="price">
-            Rp. <span className="price-amount">120.000</span>/bln
+            Mulai Dari Rp.<span className="price-amount">40.000</span>/bln
           </div>
-          <button className="promo-btn">Cek Promo</button>
+          <Link to="/order">
+            <button className="promo-btn">Pesan Sekarang</button>
+          </Link>
         </div>
       </div>
     </main>

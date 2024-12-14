@@ -4,27 +4,33 @@ import './Testimonials.css';
 
 const testimonialsData = [
   {
-    name: "Romeena De Silva",
-    company: "Janet Cosmetics",
+    name: "Dewi Anggraini",
+    company: "Citra Batik Indonesia",
     rating: 5,
-    testimonial: "Without any doubt I recommend Alcaline Solutions as one of the best web design and digital marketing agencies...",
+    testimonial: "Tim Webinasia benar-benar memahami kebutuhan kami. Desain website yang mereka buat sangat menarik dan sesuai dengan identitas merek kami.",
     photo: "images/user.png"
   },
   {
-    name: "John Doe",
-    company: "Doe Ventures",
+    name: "Budi Santoso",
+    company: "Toko Online Nusantara",
     rating: 4,
-    testimonial: "Aplikasi ini sangat membantu saya dalam pekerjaan sehari-hari!",
+    testimonial: "Layanan pengembangan e-commerce Webinasia sangat membantu bisnis kami berkembang. Prosesnya cepat dan hasilnya memuaskan!",
     photo: "images/user.png"
   },
   {
-    name: "Jane Smith",
-    company: "Smith & Co.",
+    name: "Siti Nurhaliza",
+    company: "Healthy Life Co.",
     rating: 5,
-    testimonial: "Fitur-fiturnya lengkap dan mudah digunakan.",
+    testimonial: "Webinasia memberikan strategi pemasaran digital yang efektif. Traffic website kami meningkat pesat dalam waktu singkat.",
     photo: "images/user.png"
   },
-  // Add more testimonials as needed
+  {
+    name: "Rizky Firmansyah",
+    company: "Startup Kreatif",
+    rating: 5,
+    testimonial: "Kami sangat puas dengan branding yang dibuat oleh Webinasia. Mereka mampu merepresentasikan visi perusahaan kami dengan sangat baik.",
+    photo: "images/user.png"
+  },
 ];
 
 function Testimonials() {
@@ -45,7 +51,6 @@ function Testimonials() {
     nextArrow: <button className="slick-next">❯</button>,
     afterChange: (current) => setActiveTestimonial(testimonialsData[current])
   };
-  
 
   const renderStars = (rating) => {
     return [...Array(5)].map((_, index) => (
@@ -55,8 +60,8 @@ function Testimonials() {
 
   return (
     <section className="testimonials">
-      <h2>Apa Yang Klien Katakan</h2>
-      <h3>Working with Us</h3>
+      <h2>Apa Kata Klien Kami</h2>
+      <h3>Bekerja Bersama Webinasia</h3>
       <div className="testimonial-content">
         <p className="testimonial-text">"{activeTestimonial.testimonial}"</p>
       </div>

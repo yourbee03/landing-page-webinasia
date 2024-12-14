@@ -1,0 +1,124 @@
+/* Global Styling */
+body {
+    background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Header */
+  h1 {
+    font-size: 2rem;
+    color: #ffdf6c;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+  }
+  
+  /* Form */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    color: #ffdf6c;
+  }
+  
+  input,
+  select,
+  button {
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  input,
+  select {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  input:focus,
+  select:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  button {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(255, 126, 95, 0.5);
+  }
+  
+  button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 126, 95, 0.6);
+  }
+  
+  /* Form Check (Radio Buttons) */
+  .form-check {
+    margin-bottom: 10px;
+  }
+  
+  .form-check-label {
+    color: #ffdf6c;
+  }
+  
+  .form-check-input {
+    margin-right: 10px;
+    transform: scale(1.2);
+    accent-color: #ff7e5f;
+  }
+  
+  /* Footer Decoration */
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  footer a {
+    color: #ffdf6c;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 3D Effect */
+  .order-page {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .container:hover {
+    transform: rotateY(-10deg);
+    transition: transform 0.5s;
+  }
+  

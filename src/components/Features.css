@@ -1,106 +1,123 @@
 .features {
   text-align: center;
-  padding: 8px;
-  background-color: #f8f9fa;
+  padding: 50px 0;
+  background-color: #f5f5f5;
 }
 
 .features h2 {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 2.5rem;
   margin-bottom: 30px;
+  font-weight: 600;
   color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.features-carousel .feature-item {
-  background-color: #fff; /* Ensure solid background */
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 40px; /* Ensure equal padding on all sides */
-  margin: 0 30px;
-  text-align: left;
-  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-  box-sizing: border-box; /* Ensure padding is included in the element's total width */
+.features-carousel {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
 }
 
-.features-carousel .slick-center .feature-item {
-  border: 2px solid #e8e8e8; /* Highlight the active (center) slide with a border */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05); /* Slightly scale up the active slide */
-  background-color: #ffffff; /* Ensure the background stays solid */
+.feature-item {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateY(10deg);
+  transition: transform 0.5s ease-in-out;
+  opacity: 0.9;
+  margin: 20px;
 }
 
-.features-carousel .feature-item img {
-  width: 40px;
-  height: 40px;
+.feature-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.feature-item h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.feature-item:hover {
+  transform: perspective(1000px) rotateY(0deg);
+  opacity: 1;
+}
+
+.feature-item:hover img {
+  transform: scale(1.1);
+}
+
+.feature-item.active {
+  transform: perspective(1000px) rotateY(0deg);
+  opacity: 1;
+}
+
+.feature-item .feature-icon {
+  font-size: 3rem;
+  color: #ff6f61;
   margin-bottom: 15px;
 }
 
-.features-carousel .feature-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #0d7794;
-  margin-bottom: 10px;
-}
-
-.features-carousel .feature-item p {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6;
-}
-
 .slick-dots {
-  bottom: -30px;
+  bottom: -40px;
 }
 
 .slick-dots li button:before {
-  font-size: 10px;
-  color: #ccc;
+  font-size: 18px;
+  color: #ff6f61;
 }
 
 .slick-dots li.slick-active button:before {
-  color: #e8e8e8;
+  color: #333;
 }
 
-/* Styles for the previous and next arrows */
-.slick-prev, .slick-next {
-  width: 40px;  /* Increase width */
-  height: 40px; /* Increase height */
-  background-color: #e8e8e8;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 20px; /* Set the size of the arrow icons */
-  z-index: 1;
-  position: absolute; /* Ensure they stay within the carousel container */
-  top: 50%;
-  transform: translateY(-50%);
+.features .feature-item:hover {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px) rotateY(5deg);
 }
 
-.slick-prev {
-  left: 10px; /* Position the previous button on the left */
+/* Add additional content styles */
+.features .feature-item .extra-info {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
+  display: none;
 }
 
-.slick-next {
-  right: 10px; /* Position the next button on the right */
+.features .feature-item.active .extra-info {
+  display: block;
 }
 
-.slick-prev:hover, .slick-next:hover {
-  background-color: #d1d1d1; /* Slightly darker on hover */
+.features .feature-item .cta-button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
 }
 
-.slick-prev:before, .slick-next:before {
-  content: ''; /* Remove default icons */
-}
-
-/* Add custom arrow icons (for example, using font-awesome or CSS) */
-.slick-prev::before {
-  content: '←'; /* Left arrow */
-  font-size: 24px; /* Adjust size */
-}
-
-.slick-next::before {
-  content: '→'; /* Right arrow */
-  font-size: 24px; /* Adjust size */
+.features .feature-item .cta-button:hover {
+  background-color: #d95f53;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import './Features.css';
+import { FaBrush, FaLaptopCode, FaSearch, FaShoppingCart, FaPenFancy } from 'react-icons/fa';
 
 function Features() {
   const settings = {
@@ -17,27 +18,32 @@ function Features() {
 
   return (
     <section className="features">
-      <h2>Layanan Kami</h2>
+      <h2>Layanan Webinasia</h2>
       <Slider {...settings} className="features-carousel">
         <div className="feature-item">
-          <img src="feature1.png" alt="Mobile App Development" />
-          <h3>Mobile App Development</h3>
-          <p>A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.</p>
+          <FaBrush className="feature-icon" />
+          <h3>Branding & Identity</h3>
+          <p>Kami membantu membangun identitas merek yang kuat dan konsisten untuk bisnis Anda, mulai dari desain logo hingga strategi pemasaran.</p>
         </div>
         <div className="feature-item active">
-          <img src="feature2.png" alt="Web Design & Development" />
-          <h3>Web Design & Development</h3>
-          <p>A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.</p>
+          <FaLaptopCode className="feature-icon" />
+          <h3>Desain & Pengembangan Website</h3>
+          <p>Kami menciptakan website yang responsif, modern, dan sesuai kebutuhan bisnis Anda untuk meningkatkan kehadiran online.</p>
         </div>
         <div className="feature-item">
-          <img src="feature3.png" alt="Software Testing Service" />
-          <h3>Software Testing Service</h3>
-          <p>A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.</p>
+          <FaSearch className="feature-icon" />
+          <h3>Optimasi SEO</h3>
+          <p>Dapatkan peringkat lebih tinggi di mesin pencari dan tingkatkan visibilitas website Anda dengan layanan SEO profesional kami.</p>
         </div>
         <div className="feature-item">
-          <img src="feature4.png" alt="Software Maintenance" />
-          <h3>Software Maintenance</h3>
-          <p>A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.</p>
+          <FaShoppingCart className="feature-icon" />
+          <h3>Pengembangan E-Commerce</h3>
+          <p>Mulai toko online Anda dengan fitur canggih dan pengalaman pengguna yang mudah untuk meningkatkan penjualan Anda.</p>
+        </div>
+        <div className="feature-item">
+          <FaPenFancy className="feature-icon" />
+          <h3>Konten & Strategi Pemasaran</h3>
+          <p>Kami merancang strategi konten yang menarik dan relevan untuk membangun hubungan dengan audiens Anda secara efektif.</p>
         </div>
       </Slider>
     </section>
