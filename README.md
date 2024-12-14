@@ -9,6 +9,8 @@ Webinasia adalah platform untuk membuat dan mengelola website dengan berbagai fi
 ### Prerequisites
 
 Pastikan Anda memiliki **Node.js** dan **npm** yang sudah terinstal di mesin Anda.
+```
+
 
 ### Langkah-langkah Instalasi
 
