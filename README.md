@@ -1,70 +1,54 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```markdown
+# Webinasia
 
-## Available Scripts
+Webinasia adalah platform untuk membuat dan mengelola website dengan berbagai fitur dan paket yang dapat disesuaikan dengan kebutuhan pelanggan. Proyek ini menyediakan berbagai paket layanan untuk pembuatan website, pemeliharaan, dan penggunaan template sesuai kategori bisnis yang berbeda.
 
-In the project directory, you can run:
+## Instalasi
 
-### `npm start`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Pastikan Anda memiliki **Node.js** dan **npm** yang sudah terinstal di mesin Anda.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Langkah-langkah Instalasi
 
-### `npm test`
+1. Clone repository ini:
+   ```bash
+   git clone https://github.com/yourbee03/landing-page-webinasia.git
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+   ```bash
+   cd landing-page-webinasia
+   npm install
+   ```
 
-### `npm run build`
+3. Jalankan aplikasi:
+   ```bash
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Akses aplikasi di `http://localhost:3000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Kontribusi
 
-### `npm run eject`
+Kami sangat menghargai kontribusi dari semua pihak. Jika Anda ingin berkontribusi pada proyek ini, ikuti langkah-langkah berikut:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Fork repositori ini.
+2. Buat cabang (branch) baru (`git checkout -b feature-nama-fitur`).
+3. Lakukan perubahan pada cabang tersebut.
+4. Commit perubahan (`git commit -m 'Menambahkan fitur baru'`).
+5. Push ke cabang Anda (`git push origin feature-nama-fitur`).
+6. Buat Pull Request.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Lisensi
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Proyek ini menggunakan lisensi **MIT**. Lihat [LICENSE](LICENSE) untuk informasi lebih lanjut.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+Terima kasih telah menggunakan Webinasia!
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Dokumentasi ini mencakup informasi dasar tentang proyek, instalasi, struktur proyek, serta cara berkontribusi. Anda bisa mengganti beberapa detail seperti email atau URL sesuai dengan kebutuhan proyek Anda.
