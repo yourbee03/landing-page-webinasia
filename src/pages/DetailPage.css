@@ -1,175 +1,247 @@
-.detail-page {
-  font-family: 'Arial', sans-serif;
-  background: #ffffff;
-  padding: 20px;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5; /* Slightly lighter background for a modern feel */
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Header Section */
 .header-section {
+  background-color: #005b99; /* Darker blue for better contrast */
+  color: white;
+  padding: 80px 20px; /* Increased padding for better impact */
   text-align: center;
-  margin-bottom: 50px;
+  border-bottom: 2px solid #ddd;
 }
 
 .header-section h1 {
-  font-size: 2.5rem;
-  color: #333333;
-}
-
-.pricing-section {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.pricing-container {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.pricing-card {
-  background: #f9f9f9;
-  border: 1px solid #dddddd;
-  border-radius: 15px;
-  padding: 30px;
-  text-align: center;
-  width: 30%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.pricing-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.price {
-  font-size: 1.5rem;
+  font-size: 40px;
+  letter-spacing: 2px;
   font-weight: bold;
-  margin: 15px 0;
-  color: #555555;
+  text-transform: uppercase;
+  margin-bottom: 20px; /* Added margin for better spacing */
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+/* Pricing Section */
+.pricing-section {
+  background-color: #ffffff;
+  padding: 50px 20px; /* Slightly more padding for better spacing */
+  text-align: center;
+  color: #333;
 }
 
-li {
-  font-size: 1rem;
-  margin: 10px 0;
+.pricing-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px; /* Increased margin for more spacing */
 }
 
-li.enabled {
-  color: #4caf50;
+.harga-table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
 }
 
-li.disabled {
-  color: #e57373;
+.harga-table th, .harga-table td {
+  padding: 18px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 18px; /* Increased font size for readability */
 }
 
-.select-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.harga-table th {
+  background-color: #f4f4f4;
+  color: #444; /* Slightly darker color for table headers */
+  font-weight: bold;
 }
 
-.select-button:hover {
-  background-color: #0056b3;
+.harga-table td {
+  background-color: #fff;
 }
 
+.harga-table tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+}
+
+/* Template Section */
 .template-section {
-  margin-top: 50px;
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.template-section h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  letter-spacing: 1.2px;
 }
 
 .template-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 .template-item {
-  background: #f9f9f9;
-  border: 1px solid #dddddd;
+  width: 300px;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 15px;
-  width: 30%;
-  transition: transform 0.3s ease;
-}
-
-.template-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Slightly larger shadow for more depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .template-item img {
   width: 100%;
-  border-radius: 10px 10px 0 0;
+  height: 200px; /* Increased image height for better visuals */
+  object-fit: cover;
 }
 
-.template-info {
-  padding: 15px;
-  text-align: center;
-  color: #333333
+.template-item .template-info {
+  padding: 20px;
 }
 
-.preview-button {
-  background-color: #007bff;
+.template-item .template-info p {
+  margin-bottom: 15px; /* More margin for better spacing */
+  font-size: 17px;
+  color: #555;
+}
+
+.template-item .preview-button {
+  background-color: #006bb3; /* Lighter shade of blue */
   color: white;
-  padding: 10px 15px;
+  padding: 12px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-.preview-button:hover {
-  background-color: #0056b3;
+.template-item .preview-button:hover {
+  background-color: #004d73;
 }
 
-.features-section, .comparison-section {
-  margin-top: 50px;
+.template-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.features-section ul {
-  list-style-type: square;
+/* Comparison Section */
+.comparison-section {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.comparison-section h2 {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+  letter-spacing: 1.2px;
 }
 
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .comparison-table th, .comparison-table td {
-  padding: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
   text-align: center;
+  font-size: 18px;
 }
 
 .comparison-table th {
-  background-color: #007bff;
+  background-color: #005b99;
   color: white;
 }
 
 .comparison-table td {
   background-color: #f9f9f9;
-  color: #333333;
 }
 
-.tick {
-  color: #4caf50;
+.comparison-table .tick {
+  color: green;
+  font-size: 22px; /* Larger icons for better visibility */
 }
 
-.cross {
-  color: #e57373;
+.comparison-table .cross {
+  color: red;
+  font-size: 22px; /* Larger icons for better visibility */
 }
 
+.comparison-table tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+}
+
+/* Maintenance Table (Added) */
+.maintenance-table {
+  width: 100%;
+  margin-top: 40px;
+  border-collapse: collapse;
+}
+
+.maintenance-table th, .maintenance-table td {
+  padding: 18px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 16px;
+}
+
+.maintenance-table th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: bold;
+}
+
+.maintenance-table td {
+  background-color: #fff;
+}
+
+.maintenance-table tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .pricing-card, .template-item {
-    width: 80%;
-    margin: 10px auto;
+  .header-section h1 {
+    font-size: 30px;
+  }
+
+  .template-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .template-item {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .comparison-table th, .comparison-table td {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .pricing-section h2 {
+    font-size: 26px;
   }
 }

@@ -56,13 +56,6 @@ const Header = ({ isLoggedIn, handleLogin, handleLogout }) => {
             Tentang Kami
           </Link>
         </Nav>
-        <Button 
-          variant="warning" 
-          className="text-white" 
-          onClick={isLoggedIn ? handleLogout : handleLogin}
-        >
-          {isLoggedIn ? 'Log Out' : 'Log In'}
-        </Button>
       </Navbar.Collapse>
     </Navbar>
   );

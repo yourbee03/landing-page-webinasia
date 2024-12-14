@@ -1,155 +1,205 @@
-/* Homepage.css */
+/* General Styles */
+.homepage {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to right, #007bff, #6c63ff);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
 
-/* General Styling */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(120deg, #e0eafc, #cfdef3);
-  }
-  
-  .homepage {
-    padding: 20px;
-    color: #2c3e50;
-  }
-  
-  section {
-    margin-bottom: 50px;
-    text-align: center;
-  }
-  
-  /* Hero Section */
-  .hero-section {
-    background: linear-gradient(135deg, #3498db, #2ecc71);
-    color: white;
-    padding: 50px 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transform: scale(1);
-    transition: transform 0.3s;
-  }
-  
-  .hero-section:hover {
-    transform: scale(1.05);
-  }
-  
-  .hero-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .hero-section p {
-    font-size: 1.2rem;
-  }
-  
-  /* About Section */
-  .about-section {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .about-section h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-  
-  .about-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  /* Benefits Section */
-  .benefits-section {
-    padding: 20px;
-  }
-  
-  .benefits-section ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .benefits-section li {
-    font-size: 1.1rem;
-    margin: 10px 0;
-    background: linear-gradient(135deg, #f6d365, #fda085);
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Articles Section */
-  .articles-section {
-    padding: 20px;
-  }
-  
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: white;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+/* About Section */
+.about-section {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-section p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 20px auto;
+}
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.explore-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.explore-button:hover {
+  background-color: #0056b3;
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+.explore-button:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card h3 {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.benefit-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.benefit-card .icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 10px 10px 20px #c8c8c8, -10px -10px 20px #ffffff;
+  cursor: pointer;
+}
+
+/* Articles Section */
+.articles-section {
+  padding: 40px 20px;
+}
+
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.article-card {
+  flex: 1 1 calc(33.333% - 20px);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.article-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.article-card .read-more {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.article-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .articles-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
-  
+
   .article-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    width: 30%;
-    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 100%;
   }
-  
-  .article-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+
+  .benefits-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
-  
-  .article-card h3 {
-    font-size: 1.5rem;
-    margin: 15px 0;
-  }
-  
-  .article-card p {
-    font-size: 1rem;
-    padding: 0 10px;
-    line-height: 1.5;
-  }
-  
-  .article-card .read-more {
-    display: inline-block;
-    margin: 15px;
-    padding: 10px 20px;
-    background: #3498db;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-  }
-  
-  .article-card .read-more:hover {
-    background: #2c3e50;
-  }
-  
-  /* Animation */
-  .article-card {
-    animation: fadeInUp 0.5s ease-in-out;
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    .article-card {
-      width: 80%;
-    }
-  }
+}

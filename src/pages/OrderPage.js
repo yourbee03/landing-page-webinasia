@@ -2,18 +2,20 @@ import React, { useState } from 'react';
 import './OrderPage.css';
 
 const OrderPage = () => {
-  const [websiteName, setWebsiteName] = useState('');
-  const [selectedTemplate, setSelectedTemplate] = useState('');
   const [selectedPackage, setSelectedPackage] = useState('');
+  const [websiteName, setWebsiteName] = useState('');
+  const [domainName, setDomainName] = useState('');
+  const [selectedTemplate, setSelectedTemplate] = useState('');
   const [paymentMethod, setPaymentMethod] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const data = {
-      websiteName,
-      selectedTemplate,
       selectedPackage,
+      websiteName,
+      domainName,
+      selectedTemplate,
       paymentMethod,
     };
 
@@ -29,9 +31,10 @@ const OrderPage = () => {
       if (result.status === 'success') {
         alert('Pemesanan berhasil disimpan ke Google Sheet!');
         // Reset form
-        setWebsiteName('');
-        setSelectedTemplate('');
         setSelectedPackage('');
+        setWebsiteName('');
+        setDomainName('');
+        setSelectedTemplate('');
         setPaymentMethod('');
       } else {
         alert('Terjadi kesalahan. Silakan coba lagi.');
@@ -46,6 +49,50 @@ const OrderPage = () => {
     <div className="order-page container">
       <h1 className="text-center mt-4">Pemesanan Website</h1>
       <form onSubmit={handleSubmit} className="mt-4">
+        {/* Package Selection */}
+        <div className="mb-3">
+          <label className="form-label">Paket yang Dipilih</label>
+          <div>
+            <div className="form-check">
+              <input
+                type="radio"
+                id="packageA"
+                name="package"
+                value="Paket A"
+                className="form-check-input"
+                checked={selectedPackage === 'Paket A'}
+                onChange={(e) => setSelectedPackage(e.target.value)}
+              />
+              <label htmlFor="packageA" className="form-check-label">Paket Basic</label>
+            </div>
+            <div className="form-check">
+              <input
+                type="radio"
+                id="packageB"
+                name="package"
+                value="Paket B"
+                className="form-check-input"
+                checked={selectedPackage === 'Paket B'}
+                onChange={(e) => setSelectedPackage(e.target.value)}
+              />
+              <label htmlFor="packageB" className="form-check-label">Paket Pro</label>
+            </div>
+            <div className="form-check">
+              <input
+                type="radio"
+                id="packageC"
+                name="package"
+                value="Paket C"
+                className="form-check-input"
+                checked={selectedPackage === 'Paket C'}
+                onChange={(e) => setSelectedPackage(e.target.value)}
+              />
+              <label htmlFor="packageC" className="form-check-label">Paket Premium</label>
+            </div>
+          </div>
+        </div>
+
+        {/* Website Name */}
         <div className="mb-3">
           <label htmlFor="websiteName" className="form-label">Nama Website</label>
           <input
@@ -58,6 +105,46 @@ const OrderPage = () => {
           />
         </div>
 
+        {/* Domain Name */}
+        <div className="mb-3">
+          <label htmlFor="domainName" className="form-label">Nama Domain</label>
+          <select
+            id="domainName"
+            className="form-select"
+            value={domainName}
+            onChange={(e) => setDomainName(e.target.value)}
+            required
+          >
+            <option value="">Pilih Domain</option>
+            {selectedPackage === 'Paket A' ? (
+              <option value=".web.id">.web.id</option>
+            ) : (
+              <>
+                <option value=".com">.com</option>
+                <option value=".net">.net</option>
+                <option value=".org">.org</option>
+                <option value=".co">.co</option>
+                <option value=".info">.info</option>
+                <option value=".biz">.biz</option>
+                <option value=".name">.name</option>
+                <option value=".tv">.tv</option>
+                <option value=".me">.me</option>
+                <option value=".xyz">.xyz</option>
+                <option value=".online">.online</option>
+                <option value=".tech">.tech</option>
+                <option value=".io">.io</option>
+                <option value=".ai">.ai</option>
+                <option value=".app">.app</option>
+                <option value=".cloud">.cloud</option>
+                <option value=".shop">.shop</option>
+                <option value=".store">.store</option>
+                <option value=".design">.design</option>
+              </>
+            )}
+          </select>
+        </div>
+
+        {/* Template Selection */}
         <div className="mb-3">
           <label htmlFor="template" className="form-label">Template yang Dipilih</label>
           <select
@@ -74,48 +161,7 @@ const OrderPage = () => {
           </select>
         </div>
 
-        <div className="mb-3">
-          <label htmlFor="package" className="form-label">Paket yang Dipilih</label>
-          <div>
-            <div className="form-check">
-              <input
-                type="radio"
-                id="packageA"
-                name="package"
-                value="Paket A"
-                className="form-check-input"
-                checked={selectedPackage === 'Paket A'}
-                onChange={(e) => setSelectedPackage(e.target.value)}
-              />
-              <label htmlFor="packageA" className="form-check-label">Paket A</label>
-            </div>
-            <div className="form-check">
-              <input
-                type="radio"
-                id="packageB"
-                name="package"
-                value="Paket B"
-                className="form-check-input"
-                checked={selectedPackage === 'Paket B'}
-                onChange={(e) => setSelectedPackage(e.target.value)}
-              />
-              <label htmlFor="packageB" className="form-check-label">Paket B</label>
-            </div>
-            <div className="form-check">
-              <input
-                type="radio"
-                id="packageC"
-                name="package"
-                value="Paket C"
-                className="form-check-input"
-                checked={selectedPackage === 'Paket C'}
-                onChange={(e) => setSelectedPackage(e.target.value)}
-              />
-              <label htmlFor="packageC" className="form-check-label">Paket C</label>
-            </div>
-          </div>
-        </div>
-
+        {/* Payment Method */}
         <div className="mb-3">
           <label htmlFor="paymentMethod" className="form-label">Metode Pembayaran</label>
           <select
@@ -128,7 +174,7 @@ const OrderPage = () => {
             <option value="">Pilih Metode Pembayaran</option>
             <option value="Transfer Bank">Transfer Bank</option>
             <option value="E-Wallet">E-Wallet</option>
-            <option value="Kartu Kredit">QRIS</option>
+            <option value="QRIS">QRIS (Saat Ini Belum Tersedia)</option>
           </select>
         </div>
 
